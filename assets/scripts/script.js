@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const weatherIconElement = document.getElementById('weather-icon');
     const cityInput = document.getElementById('city-input');
     const searchButton = document.getElementById('search-button');
+    const positionElement = document.getElementById('position');
 
     async function getWeatherByCoords(lat, lon) {
         try {
@@ -59,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json();
 
         if (data.cod === '404') {
-            locationElement.textContent = 'Ville introuvable';
+            positionElement.remove();
+            locationElement.textContent = 'Emplacement introuvable';
             temperatureElement.textContent = '';
             descriptionElement.textContent = '';
             precipitationElement.textContent = '';
@@ -67,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        positionElement.remove();
         locationElement.textContent = `${data.name}`;
         temperatureElement.textContent = `${data.main.temp.toFixed()}°C`;
 
