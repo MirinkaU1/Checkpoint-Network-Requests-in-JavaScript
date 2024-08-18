@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myWeather</title>
+    <link rel="shortcut icon" href="assets/img/cloud-solid.svg" type="image/x-icon">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body class="font-Poppins h-dvh bg-gradient-to-br from-sky-400 to-sky-100 text-white">
+    <header class="text-white p-4">
+      <h1 class="text-3xl font-bold text-center">myWeather</h1>
+    </header>
+    
+    <main class="max-w-4xl mx-auto p-7 ">
+        <div class="text-center mb-5">
+            <input id="city-input" type="text" placeholder="Entrer la ville" class="p-2 px-4 border text-black border-gray-300 w-64 rounded-lg"/>
+            <button id="search-button" class="bg-blue-400 text-white p-2 rounded-lg ml-2 w-10"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="text-center">
+            <p>Ville actuelle</p>
+            <div class="flex justify-center gap-2">
+                <i class="fa-solid fa-location-dot text-xl mt-1"></i>
+                <p id="location" class="text-xl font-semibold mb-2"></p>
+            </div>
+
+            <div class="flex justify-evenly items-center pt-5">
+                <div class="text-left">
+                    <p id="temperature" class="text-7xl font-semibold"></p>
+                    <p id="description" class="text-lg mb-2 "></p>
+                </div>
+                <p id="weather-icon" class="text-4xl mb-2"></p>   
+            </div>
+            <p id="precipitation" class="text-md mb-4"></p>
+        </div>
+      
+    </main>
+    <script src="./assets/scripts/script.js"></script>
+</body>
+</html>
